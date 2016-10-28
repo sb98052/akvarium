@@ -1,26 +1,43 @@
 package com.geewhizstuff.aquariummanager;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.support.multidex.MultiDex;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.InputType;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.app.AlertDialog;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static android.R.id.input;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class FullscreenActivity extends AppCompatActivity {
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -176,8 +193,89 @@ public class FullscreenActivity extends AppCompatActivity {
     }
 
     public void addFish(int x, int y) {
-        Fish f = new Fish(this, (ViewGroup) getWindow().getDecorView().getRootView(),x,y);
-        fishes.add(f);
+        Fish newFish = null;
+        final Dialog newFishDialog = new Dialog(this);
+        newFishDialog.setTitle("Add fish");
+        newFishDialog.setContentView(R.layout.add_fish_dialog);
+        final int x_ = x;
+        final int y_ = y;
+        final Context context = this;
+
+        final ImageView fishImage = (ImageView)newFishDialog.findViewById(R.id.fishImage);
+        fishImage.setClickable(true);
+        fishImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog selectFishDialog = new Dialog(context);
+                selectFishDialog.setTitle("Select fish");
+                selectFishDialog.setContentView(R.layout.select_fish_dialog);
+                ImageView.OnClickListener listener = new ImageView.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fishImage.setImageDrawable(((ImageView) v).getDrawable());
+                        selectFishDialog.cancel();
+                    }
+                };
+                selectFishDialog.findViewById(R.id.button_gupka).setOnClickListener(listener);
+                selectFishDialog.findViewById(R.id.button_gurama).setOnClickListener(listener);
+                selectFishDialog.findViewById(R.id.button_prisavnik).setOnClickListener(listener);
+                selectFishDialog.findViewById(R.id.button_skalar).setOnClickListener(listener);
+                selectFishDialog.show();
+            }
+        });
+
+        Button cancelButton = (Button) newFishDialog.findViewById(R.id.cancelButton);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newFishDialog.cancel();
+            }
+        });
+
+        Button addButton = (Button) newFishDialog.findViewById(R.id.addButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int age = ((SeekBar)(newFishDialog.findViewById(R.id.ageBar))).getProgress();
+                Fish.Gender gender = Fish.Gender.unknown;
+                switch (((RadioGroup)(newFishDialog.findViewById(R.id.genderRadio))).getCheckedRadioButtonId()) {
+                    case R.id.radio_male : gender = Fish.Gender.male; break;
+                    case R.id.radio_female : gender = Fish.Gender.female; break;
+                    case R.id.radio_dontknow : gender = Fish.Gender.unknown; break;
+                }
+                /*TODO:
+                - vytvorit nove typy ryb a zmenit Fish len na interface, podla obrazka vytvorit typ ryby
+                - obrazky ryb su len docasne
+                 */
+                Fish f = new Fish(context, (ViewGroup) getWindow().getDecorView().getRootView(),x_,y_, age, gender);
+                fishes.add(f);
+                newFishDialog.cancel();
+            }
+        });
+
+        final TextView textAge= (TextView) newFishDialog.findViewById(R.id.ageText);
+        SeekBar ageBar = (SeekBar) newFishDialog.findViewById(R.id.ageBar);
+        ageBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                textAge.setText("Age: " + String.valueOf(seekBar.getProgress()));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+        newFishDialog.show();
+
 
     }
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/button_gupka"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@android:drawable/btn_default"
+                app:srcCompat="@drawable/gupka" />
+
+            <ImageView
+                android:id="@+id/button_gurama"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@android:drawable/btn_default"
+                app:srcCompat="@drawable/gurama" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/button_skalar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@android:drawable/btn_default"
+                app:srcCompat="@drawable/skalar" />
+
+            <ImageView
+                android:id="@+id/button_prisavnik"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@android:drawable/btn_default"
+                app:srcCompat="@drawable/prisavnik" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

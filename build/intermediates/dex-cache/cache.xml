@@ -2,76 +2,103 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_b3ce58de587ffcc93cffad60f2b715ddce691d7b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_f1d2e28a221d98d5a51afef0563270d209888a9e/classes.dex" />
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_f0af7dd2aab0bae0ffe172a0f2a52ef5af931537.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_4d3d82f379328456b5a57d9d8482b48df0d1e10c/classes.dex" />
+        sha1="a299670f1e1d5c90e43afc474df661cbe5a1109f">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\instant-run_e4effb2fd5b363373964195828530d09b79a87ab.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_0011de8e9637e67a30d05b846227eba32015d299/classes.dex" />
+        sha1="225c04456c1ac8c9a83dc36f77ede9eb0bdabefe">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_386088ed97013970718f48fdb1996dfcd2a7873d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_b8355be09b45ba5de12d9e5fb500077c4feba4b5/classes.dex" />
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_121a454ac5ce79810195bc1cf97270c5308a250c.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c72f4985df3c9944783ee4e2dc94732a986a66d7">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6723f44d5b95efb6ad4309dbfcf061bbadd22f56/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        is-multidex="false"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_c86f6d9319b43cc161a37c137b047f474651f794/classes.dex" />
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_6c2a284fdd61d0d8ac24aa3991d9cfbc35ef85c7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
-        sha1="9d54f371a2ab132779bd621fc985e4c5b8af0456">
-        <dex dex="/Users/sapanbhatia/Downloads/AquariumManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_faf4873852a2ce1da05328116c989768dead3126/classes.dex" />
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-multidex-1.0.1_96f5557723fd23f1e5ad04cee8a9e6f04cb9cdcf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_447e69d05401fbe5f3d4ec826969f743b3b30260.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_ac389d7d87d32780d90987bd7776a1f31dd6a54a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_44585ced67a48c5733baffaaa73e639810507a64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_2b441bda813c1d51830f440620210fbb6c8fcd38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Andrej\AndroidProjects\akvarium\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_0051d9fa9b75743615e96c4db2104f5ac124929f.jar" />
     </item>
 
 </items>

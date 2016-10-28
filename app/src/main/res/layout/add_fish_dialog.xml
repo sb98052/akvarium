@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            app:srcCompat="@drawable/skalar"
+            android:id="@+id/fishImage" />
+
+        <TextView
+            android:text="Gender:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:orientation="vertical"
+            android:id="@+id/genderRadio">
+
+            <RadioButton android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_male"
+                />
+            <RadioButton android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_female"
+                />
+            <RadioButton android:id="@+id/radio_dontknow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_unknown"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:text="Age: 0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ageText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:max="30"
+            android:progress="0"
+            android:id="@+id/ageBar"
+            style="@style/Widget.AppCompat.SeekBar" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addButton"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button" />
+
+            <Button
+                android:text="Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelButton"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

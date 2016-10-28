@@ -21,8 +21,13 @@ public class Fish {
     public double xbound, ybound;
     Activity act;
     public int orientation;
+    private int age;
+    private Gender gender;
+    enum Gender {
+        male, female, unknown;
+    }
 
-    public Fish(Context context, ViewGroup vg, int startX, int startY) {
+    public Fish(Context context, ViewGroup vg, int startX, int startY, int age, Gender gender) {
        // this.topView = vg;
         RelativeLayout rl = (RelativeLayout) vg.findViewById(R.id.fishtank);
         // View fishView = View.inflate(context, R.layout.fish, rl);
@@ -50,6 +55,8 @@ public class Fish {
         y=startY;
         vx=5.0;
         vy=0.0;
+        this.age = age;
+        this.gender = gender;
 
     }
 
