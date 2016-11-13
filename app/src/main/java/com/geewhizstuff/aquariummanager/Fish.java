@@ -27,30 +27,29 @@ public class Fish {
         male, female, unknown;
     }
 
-    public Fish(Context context, ViewGroup vg, int startX, int startY, int age, Gender gender) {
+    public Fish(Context context, ViewGroup vg, int startX, int startY, int age, Gender gender, int resource) {
        // this.topView = vg;
-        RelativeLayout rl = (RelativeLayout) vg.findViewById(R.id.fishtank);
         // View fishView = View.inflate(context, R.layout.fish, rl);
 
         act = (Activity) context;
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
 
-        View fv = inflater.inflate(R.layout.fish,null);
+        RelativeLayout rl = (RelativeLayout) vg.findViewById(R.id.fishtank);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+        View fv = inflater.inflate(resource,null);
         for(int index=0; index<((ViewGroup)fv).getChildCount(); ++index) {
             View nextChild = ((ViewGroup)fv).getChildAt(index);
             if (nextChild instanceof ImageView) {
                 fishImageView = (ImageView) nextChild;
             }
         }
-
-        //fv.setBackgroundColor(0xffffff);
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(220, 180);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(fishImageView.getLayoutParams().width, fishImageView.getLayoutParams().height);
         params.leftMargin = startX;
         params.topMargin = startY;
         rl.addView(fv,params);
-        v = fv;
         xbound = rl.getWidth();
         ybound = rl.getHeight();
+        v = fv;
+
         x=startX;
         y=startY;
         vx=5.0;

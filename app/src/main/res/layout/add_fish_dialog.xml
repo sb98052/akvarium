@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="wrap_content"
+    android:layout_weight="0.17">
     <LinearLayout
 
         android:orientation="vertical"
@@ -13,9 +13,16 @@
         android:layout_height="match_parent"
         android:weightSum="1">
 
+        <TextView
+            android:text="Select fish:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="109dp"
+            android:layout_height="149dp"
             app:srcCompat="@drawable/skalar"
             android:id="@+id/fishImage" />
 
@@ -64,11 +71,11 @@
             android:progress="0"
             android:id="@+id/ageBar"
             style="@style/Widget.AppCompat.SeekBar" />
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="0.22">
 
             <Button
                 android:text="Add"
@@ -86,6 +93,8 @@
                 android:layout_weight="1" />
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 </ScrollView>

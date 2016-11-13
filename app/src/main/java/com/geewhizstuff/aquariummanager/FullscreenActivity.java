@@ -244,11 +244,20 @@ public class FullscreenActivity extends AppCompatActivity {
                     case R.id.radio_female : gender = Fish.Gender.female; break;
                     case R.id.radio_dontknow : gender = Fish.Gender.unknown; break;
                 }
-                /*TODO:
-                - vytvorit nove typy ryb a zmenit Fish len na interface, podla obrazka vytvorit typ ryby
-                - obrazky ryb su len docasne
-                 */
-                Fish f = new Fish(context, (ViewGroup) getWindow().getDecorView().getRootView(),x_,y_, age, gender);
+                Fish f = null;
+                if (((ImageView) newFishDialog.findViewById(R.id.fishImage)).getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.gupka).getConstantState())) {
+                    f = new Gupka(context, (ViewGroup) getWindow().getDecorView().getRootView(),x_,y_, age, gender);
+                }
+                else if (((ImageView) newFishDialog.findViewById(R.id.fishImage)).getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.skalar).getConstantState())) {
+                    f = new Skalar(context, (ViewGroup) getWindow().getDecorView().getRootView(),x_,y_, age, gender);
+                }
+                else if (((ImageView) newFishDialog.findViewById(R.id.fishImage)).getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.prisavnik).getConstantState())) {
+                    f = new Prisavnik(context, (ViewGroup) getWindow().getDecorView().getRootView(),x_,y_, age, gender);
+                }
+                else if (((ImageView) newFishDialog.findViewById(R.id.fishImage)).getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.gurama).getConstantState())) {
+                    f = new Gurama(context, (ViewGroup) getWindow().getDecorView().getRootView(),x_,y_, age, gender);
+                }
+
                 fishes.add(f);
                 newFishDialog.cancel();
             }
