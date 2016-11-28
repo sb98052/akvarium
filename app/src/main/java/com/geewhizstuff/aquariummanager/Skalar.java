@@ -18,32 +18,28 @@ public class Skalar extends Fish {
     }
     @Override
     public void update_position() {
-        x += vx;
-        y += vy;
-        orientation = 0;
 
         if (x + fishImageView.getLayoutParams().width > xbound) {
-            // x=xbound-1;
-            x--;
-            vx = -vx;
+            vx = Math.min(-vx, vx);
             orientation = 1;
         }
 
-        if (y +fishImageView.getLayoutParams().height> ybound) {
+        else if (y +fishImageView.getLayoutParams().height> ybound) {
             y = ybound - fishImageView.getLayoutParams().height- 1;
-            vy = -vy;
+            vy = Math.min(-vy, vy);
         }
 
-        if (x < fishImageView.getLayoutParams().width) {
-            vx = -vx;
-            x++;
+        else if (x < 0) {
+            vx = Math.max(-vx, vx);
             orientation = 2;
         }
 
-        if (y < 0) {
-            vy = -vy;
-            y = 0;
+        else if (y < 0) {
+            vy = Math.max(-vy, vy);
         }
+
+        x += vx;
+        y += vy;
 
         act.runOnUiThread(new Runnable() {
             @Override

@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +9,7 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
+
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
@@ -21,6 +23,20 @@
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
+
+    <Button
+        android:layout_height="100dp"
+        android:id="@+id/button9"
+        android:background="@drawable/budik"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="100dp"
+        android:alpha="0.5"
+        android:onClick="notification_trigger" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +45,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fishtank">
+            android:id="@+id/fishtank"
+            android:alpha="1"
+            android:alwaysDrawnWithCache="false"
+            android:clickable="false">
 
         </RelativeLayout>
 

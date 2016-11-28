@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.17">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:text="Feeding:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/feed1_enabled"
+                        android:layout_weight="0.05"
+                        android:checked="false" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05" />
+
+                    <Button
+                        android:text="08:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/feed1_time"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                        android:textSize="30sp"
+                        android:onClick="feed1"
+                        style="@android:style/Widget.Holo.Button"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/feed2_enabled"
+                        android:layout_weight="0.05" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05" />
+
+                    <Button
+                        android:text="14:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/feed2_time"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                        android:textSize="30sp"
+                        style="@android:style/Widget.Holo.Button"
+                        android:onClick="feed2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/feed3_enabled"
+                        android:layout_weight="0.05"
+                        android:checked="false" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05" />
+
+                    <Button
+                        android:text="20:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/feed3_time"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                        android:textSize="30sp"
+                        style="@android:style/Widget.Holo.Button"
+                        android:onClick="feed3" />
+                </LinearLayout>
+
+                <TextView
+                    android:text="Cleaning:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/clean_enabled"
+                        android:layout_weight="0.05"
+                        android:checked="false" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05" />
+
+                    <Button
+                        android:text="18:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/clean_time"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                        android:textSize="30sp"
+                        style="@android:style/Widget.Holo.Button"
+                        android:onClick="clean1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:layout_width="74dp"
+                        android:layout_height="match_parent"
+                        android:inputType="numberSigned"
+                        android:ems="10"
+                        android:id="@+id/clean_interval"
+                        android:text="7"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="30sp"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="day interval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/day_interval_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="30sp"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.22">
+
+                    <Button
+                        android:text="Apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/notification_ok"
+                        android:layout_weight="1"
+                        style="@style/Widget.AppCompat.Button" />
+
+                    <Button
+                        android:text="Cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/notification_cancel"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>
