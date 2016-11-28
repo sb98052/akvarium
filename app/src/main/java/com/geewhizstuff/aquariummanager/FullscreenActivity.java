@@ -145,7 +145,7 @@ public class FullscreenActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     JSONObject props = new JSONObject();
-                    props.put("user action", "accept");
+                    props.put("User action", "accept");
                     mixpanel.track("notification_dialog", props);
                 } catch (JSONException e) {
                     Log.e("MYAPP", "Unable to add properties to JSONObject", e);
